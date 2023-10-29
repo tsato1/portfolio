@@ -1,6 +1,9 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import { Toaster } from 'react-hot-toast'
+
+import Footer from '@/components/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -15,8 +18,16 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" className='!scroll-smooth'>
+      <head>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </head>
+      <body className={`${inter.className} overflow-x-hidden`}>
+        {children}
+        <Footer />
+        <Toaster position="top-right" />
+      </body>
     </html>
   )
 }
