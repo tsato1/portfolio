@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion';
 import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
+import Image from 'next/image';
 
 const wrap = (min: number, max: number, v: number) => {
   const rangeSize = max - min;
@@ -99,7 +100,12 @@ const Carousel = ({ imageUrls }: { imageUrls: string[] }) => {
             onClick={() => skipToImage(i)}
             className="relative h-[100%] hover:cursor-pointer"
           >
-            <img src={image} alt={`Thumbnail_${i}`} className='h-[100%] max-w-[100px] rounded-xl' />
+            <Image 
+              className='h-[100%] max-w-[100px] rounded-xl'
+              src={image} 
+              alt={`Thumbnail_${i}`} 
+              width={640}
+              height={512} />
             <div className={`absolute -top-2 right-0 h-[15px] w-[15px] bg-white pointer-events-none transition-transform rounded-full ${i === activeImageIndex ? "scale-x-2" : 'scale-x-0'}`} >
               <div className='flex justify-center items-center h-full'>
                 <div className='h-[10px] w-[10px] bg-black rounded-full' />

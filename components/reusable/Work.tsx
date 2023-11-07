@@ -73,10 +73,12 @@ const Work = ({
             width={1280}
             height={1280} />
           {link && <a href={link}>
-            <img
+            <Image
               className="w-30 h-10 m-auto"
               alt='Get it on Google Play'
-              src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' />
+              src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'
+              width={100}
+              height={30} />
           </a>}
           {/* {isLive && <div className="w-fit inline-block rounded-full border border-slate-950 text-sm px-2">✨ Live in Production</div>} */}
           <ul className="skill-tablets">
