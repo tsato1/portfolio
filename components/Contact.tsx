@@ -14,6 +14,31 @@ const Contact = () => {
 
       <form
         action={async (formData) => {
+          const { data, error } = await sendEmail(formData)
+
+          if (error) {
+            toast.error(error)
+            return
+          }
+
+          toast.success(`Email sent successfully! MessageId = ${data}`)
+
+          /* Go to the hero section */
+          const heroSection: HTMLElement | null = document.getElementById('hero');
+          if (heroSection) {
+            setTimeout(() => {
+              heroSection.scrollIntoView({ behavior: 'smooth' });
+            }, 500)
+          } else {
+            console.error('Hero section not found.');
+          }
+
+          /* Clear the input and textarea fields */
+          (document.querySelectorAll('input') as NodeListOf<HTMLInputElement>).forEach(item => item.value = '')
+          const textareaElement = document.querySelector('textarea') as HTMLTextAreaElement | null;
+          if (textareaElement) {
+            textareaElement.value = '';
+          }
         }}
         className="mx-auto flex flex-col items-left gap-4 py-10"
       >

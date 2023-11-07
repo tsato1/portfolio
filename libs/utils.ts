@@ -30,14 +30,17 @@ export const validateConfirmEmail = (email: string, confirmEmail: string) => {
   return true
 }
 
-const regexpValidString = new RegExp(/^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$/)
-export const validateString2 = (value: string) => {
-  if (!regexpValidString.test(value)) {
-    return false
-  }
+// TODO: validate inputs on server
+// const regexpValidString = new RegExp(/^[\w'\-,.][\w'\-,.!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]\s]{1,}$/)
+// const regexpValidString = new RegExp(/^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]\s]{2,}$/)
+// // const regexpValidString = new RegExp(/^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$/)
+// export const validateString2 = (value: string) => {
+//   if (!regexpValidString.test(value)) {
+//     return false
+//   }
 
-  return true
-}
+//   return true
+// }
 
 export const getErrorMessage = (error: unknown): string => {
   let message = 'Unknown error'
