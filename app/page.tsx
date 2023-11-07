@@ -2,7 +2,7 @@ import Hero from '@/components/Hero'
 import Skills from '@/components/Skills'
 import Works from '@/components/Works'
 import Experiences from '@/components/Experiences'
-import Contact from '@/components/Contact'
+// import Contact from '@/components/Contact'
 
 export default function Home() {
   return (
@@ -15,8 +15,8 @@ export default function Home() {
         <Works />
         <hr className="mx-auto bg-black dark:bg-white w-2/3 h-0.5" />
         <Experiences />
-        <hr className="mx-auto bg-black dark:bg-white w-2/3 h-0.5" />
-        <Contact />
+        {/* <hr className="mx-auto bg-black dark:bg-white w-2/3 h-0.5" />
+        <Contact /> */}
       </div>
     </main>
   )

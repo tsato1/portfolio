@@ -52,7 +52,7 @@ const Hero = () => {
       </div>
 
       {/* Contact Button */}
-      <motion.div
+      {/* <motion.div
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 0.14 }}
@@ -63,7 +63,7 @@ const Hero = () => {
         >
           Contact me now<BsArrowDown className="opacity-70 group-hover:translate-y-2 transition" />
         </Link>
-      </motion.div>
+      </motion.div> */}
     </section >
   )
 }

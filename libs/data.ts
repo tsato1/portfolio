@@ -213,7 +213,7 @@ export const works = [
   } as WorkData,
   {
     name: 'This portfolio website',
-    description: 'Simple web app with email functionality (contact section)',
+    description: 'Simple web app with animation',
     category: 'web',
     imageUrls: ['/portfolio.png'],
     isLive: true,
