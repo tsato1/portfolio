@@ -20,7 +20,7 @@ const Hero = () => {
                 initial={{ opacity: 0, y: -300 }}
                 animate={{ opacity: 1, y: 0 }}
               >
-                Hi, I'm Tak.
+                Hi, I&apos;m Tak.
               </motion.span>
               <br />
               <motion.span
