@@ -11,7 +11,9 @@ const Hero = () => {
       <div className='flex items-center flex-col-reverse sm:flex-row sm:justify-around p-6 gap-8 scroll-mt-40'>
         <article className='relative sm:w-1/2'>
           {/* Background Blur */}
-          <div className='absolute -z-10 top-[-10rem] sm:top-[-12rem] left-[3rem] sm:left-[14rem] h-[15rem] sm:h-[30rem] w-[15rem] sm:w-[30rem] bg-[#939fb1] rounded-full blur-[4rem] sm:blur-[10rem] dark:bg-[#946263]' />
+          <div className='absolute pointer-events-none inset-x-0 transform-gpu blur-3xl sm:-top-40'>
+            <div className='relative left-[calc(53%)] aspect-[925/568] w-[33.5rem] -translate-x-1/4 rotate-[53deg] bg-gradient-to-tr from-sky-800 to-primary-muted opacity-30 sm:w-[47.32rem]'></div>
+          </div>
 
           {/* Header */}
           <div>
