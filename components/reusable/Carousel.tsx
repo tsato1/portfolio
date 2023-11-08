@@ -60,10 +60,9 @@ const Carousel = ({ imageUrls }: { imageUrls: string[] }) => {
     <div className='w-[100%] h-[100%]'>
       <div className="relative h-[90%] flex justify-center items-center">
         <AnimatePresence initial={false} custom={direction}>
-          <motion.img
-            className={`absolute h-[100%] object-contain rounded-3xl pb-2 ${imageUrls.length > 1 ? 'hover:cursor-grab active:cursor-grabbing': ''}`}
+          <motion.div
+            className={`absolute h-[100%] rounded-3xl pb-2 ${imageUrls.length > 1 ? 'hover:cursor-grab active:cursor-grabbing' : ''}`}
             key={imageCount}
-            src={`${imageUrls[activeImageIndex]}`}
             custom={direction}
             variants={sliderVariants}
             initial="incoming"
@@ -74,7 +73,14 @@ const Carousel = ({ imageUrls }: { imageUrls: string[] }) => {
             dragConstraints={{ left: 0, right: 0 }}
             dragElastic={1}
             onDragEnd={(_, dragInfo) => dragEndHandler(dragInfo)}
-          />
+          >
+            <Image
+              className='h-[100%] w-[100%] object-contain'
+              src={imageUrls[activeImageIndex]}
+              alt="Carousel Image"
+              width={1200}
+              height={800} />
+          </motion.div>
         </AnimatePresence>
 
         {imageUrls.length > 1 && <>
