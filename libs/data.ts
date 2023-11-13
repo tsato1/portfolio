@@ -50,8 +50,8 @@ export const experiences = [
     testimonials: [
       {
         imageUrl: '',
-        name: 'F.K.',
-        position: 'CTO',
+        name: 'F.U.',
+        position: 'Fullstack Engineer',
         words: 'He excels in both expressing his opinions and actively listening to others. His strong communication skills contribute significantly to effective collaboration and teamwork.',
         linkedInUrl: ''
       }
