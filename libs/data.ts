@@ -109,7 +109,7 @@ export const experiences = [
     testimonials: [
       {
         imageUrl: '',
-        name: 'Jed',
+        name: 'J.D',
         position: 'Android Developer',
         words: 'Tak\'s ability to identify the root causes of issues and efficiently solve them demonstrates his exceptional analytical skills.',
         linkedInUrl: ''
