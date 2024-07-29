@@ -31,7 +31,7 @@ const Hero = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 }}
               >
-                A fullstack engineer with <span className='italic font-montserrat sm:text-3xl'>design</span> skills.
+                A Software engineer with <span className='italic font-montserrat sm:text-3xl'>design</span> skills.
               </motion.span>
               <br />
             </h1>

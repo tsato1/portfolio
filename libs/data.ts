@@ -51,7 +51,7 @@ export const experiences = [
       {
         imageUrl: '',
         name: 'F.U.',
-        position: 'Fullstack Engineer',
+        position: 'Senior Software Engineer',
         words: 'He excels in both expressing his opinions and actively listening to others. His strong communication skills contribute significantly to effective collaboration and teamwork.',
         linkedInUrl: ''
       }
