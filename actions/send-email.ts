@@ -1,6 +1,8 @@
+// Ctr+A -> uncomment
+
 // 'use server'
 
-// // import { Config } from 'sst/node/config' ...todo-(1)
+// // import { Config } from 'sst/node/config' //...todo-(1)
 
 // import { SESClient, SendEmailCommand } from '@aws-sdk/client-ses'
 
@@ -16,8 +18,8 @@
 //  */
 // const sesConfig = {
 //   credentials: {
-//     // accessKeyId: Config.AWS_SES_API_KEY as string,...todo-(1)
-//     // secretAccessKey: Config.AWS_SES_API_SECRET as string...todo-(1)
+//     // accessKeyId: Config.AWS_SES_API_KEY as string, //...todo-(1)
+//     // secretAccessKey: Config.AWS_SES_API_SECRET as string, //...todo-(1)
 //     accessKeyId: process.env.AWS_SES_API_KEY as string,
 //     secretAccessKey: process.env.AWS_SES_API_SECRET as string
 //   },
@@ -78,12 +80,12 @@
 //   console.log(`provided message is: ${message}`)
 
 //   let params = {
-//     Source: email,
+//     Source: process.env.AWS_SES_SENDER_EMAIL as string,
 //     Destination: {
 //       // ToAddresses: [Config.AWS_SES_SENDER_EMAIL]...todo-(1)
-//       ToAddresses: [process.env.AWS_SES_SENDER_EMAIL as string]
+//       ToAddresses: [email]
 //     },
-//     ReplyToAddresses: [email],
+//     ReplyToAddresses: [process.env.AWS_SES_SENDER_EMAIL as string],
 //     Message: {
 //       Body: {
 //         Html: {
@@ -97,7 +99,7 @@
 //       },
 //       Subject: {
 //         Charset: 'UTF-8',
-//         Data: subject
+//         Data: `Your message was sent: ${subject}`
 //       }
 //     }
 //   }
@@ -114,6 +116,13 @@
 //     }
 //   }
 // }
+
+
+
+
+
+
+
 
 // // const templateName = 'SES Test Template'
 // // export const createTemplateEmail = async () => {
