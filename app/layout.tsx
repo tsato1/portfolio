@@ -25,6 +25,7 @@ export default function RootLayout({
       </head>
       <body className={`${inter.className} overflow-x-hidden`}>
         {children}
+        <div className='border-2 border-black' />
         <Footer />
         <Toaster position="top-right" />
       </body>
