@@ -6,6 +6,12 @@ const Footer = () => {
   return (
     <footer className='h-60 flex flex-col items-center justify-center mb-14 px-4 text-center text-gray-500 space-y-2'>
       <div className='flex sm:flex-col my-6'>
+        <Link href="/terms-of-service">
+          <span className='text-sm'>Terms of Service</span>
+        </Link>
+        <Link href="/privacy-policy">
+          <span className='text-sm'>Privacy Policy</span>
+        </Link>
         <Link href="/commerce-disclosure">
           <span className='text-sm'>Commerce Disclosure</span>
         </Link>
