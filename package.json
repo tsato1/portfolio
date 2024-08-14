@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "sst bind next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "next dev",
+    "lint": "next lint",
+    "start": "next start"
   },
   "dependencies": {
     "@aws-sdk/client-ses": "^3.438.0",
@@ -17,25 +17,24 @@
     "autoprefixer": "10.4.15",
     "aws-crt": "^1.18.0",
     "clsx": "^2.0.0",
-    "eslint": "8.49.0",
+    "eslint": "^8.57.0",
     "eslint-config-next": "^14.0.0",
     "framer-motion": "^10.16.4",
     "lucide-react": "^0.279.0",
     "next": "^14.0.0",
-    "postcss": "^8.4.31",
+    "postcss": "^8.4.41",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hot-toast": "^2.4.1",
     "react-icons": "^4.11.0",
+    "sst": "ion",
     "tailwind-merge": "^1.14.0",
     "tailwindcss": "3.3.3",
     "typescript": "5.2.2",
     "zustand": "^4.4.6"
   },
   "devDependencies": {
-    "aws-cdk-lib": "2.142.1",
     "constructs": "10.3.0",
-    "prettier-plugin-tailwindcss": "^0.5.4",
-    "sst": "2.43.4"
+    "prettier-plugin-tailwindcss": "^0.5.4"
   }
 }

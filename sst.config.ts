@@ -1,15 +1,26 @@
-import { SSTConfig } from "sst";
-import { Site } from "./stacks/Site";
+/// <reference path="./.sst/platform/config.d.ts" />
 
-export default {
-  config(_input) {
+export default $config({
+  app(input) {
     return {
       name: "portfolio",
-      region: "us-east-1",
-      profile: _input.stage === "prod" ? "tak-prod" : "tak-dev",
+      removal: input?.stage === "production" ? "retain" : "remove",
+      home: "aws",
+      providers: {
+        aws: {
+          profile: "tak-prod",
+          region: "us-east-1"
+        }
+      }
     };
   },
-  stacks(app) {
-    app.stack(Site);
+  async run() {
+    new sst.aws.Nextjs("MyPortfolio", {
+      domain: {
+        name: "takahidesato.com",
+        dns: sst.aws.dns({ override: true })
+      }
+    });
   },
-} satisfies SSTConfig;
+});
+
