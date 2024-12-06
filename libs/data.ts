@@ -120,7 +120,7 @@ export const experiences = [
     companyName: '',
     companyLogoUrl: '',
     title: 'Freelancer / Programming Teacher',
-    workingPeriod: '2023.6-present',
+    workingPeriod: '2023.1-present',
     jobDescriptions: [
       'Delivering NextJs and Android projects for clients with extreme care on details, aiming to make all of them satisfied.',
       'Teaching Java with focus on Algorithm and Data Structure.'
