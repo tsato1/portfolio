@@ -1,7 +1,7 @@
 "use client"
 
 import Image from 'next/image'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion, AnimatePresence } from 'motion/react'
 
 import { useTechStacks } from "@/hooks/use-tech-stacks"
 import SectionHeading from './reusable/SectionHeading'

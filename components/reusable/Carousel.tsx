@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'motion/react';
 import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
 import Image from 'next/image';
 

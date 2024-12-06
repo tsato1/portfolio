@@ -2,7 +2,7 @@
 
 import React, { useState } from "react"
 import Image from "next/image"
-import { AnimatePresence, Variants, motion } from "framer-motion"
+import { AnimatePresence, Variants, motion } from "motion/react"
 
 import { works } from "@/libs/data"
 
